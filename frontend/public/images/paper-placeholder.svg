@@ -1,0 +1,7 @@
+<!-- designed by mew -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-label="Research paper image placeholder">
+  <rect width="1200" height="760" fill="#e9f0f2"/>
+  <rect x="242" y="120" width="716" height="520" rx="12" fill="#f9fbfc" stroke="#c9d5da" stroke-width="3"/>
+  <path d="M310 220h560M310 276h440M310 390h560M310 446h490M310 502h530" stroke="#d6e0e4" stroke-width="22" stroke-linecap="round"/>
+  <rect x="310" y="150" width="205" height="32" rx="8" fill="#a9c8d1"/>
+</svg>

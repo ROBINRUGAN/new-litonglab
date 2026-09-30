@@ -1,0 +1,138 @@
+[
+  {
+    "slug": "tack",
+    "name": "TACK",
+    "headline": "Taming acknowledgments.",
+    "category": "Transport protocols",
+    "summary": "Improving wireless transport performance by taming acknowledgments.",
+    "body": "<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/superlitong/fillp-demo\"> [Github] </a></p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/superlitong/tack-paper-slides-video\"> [Video and Slides] </a></p>\n<h2>Abstract</h2>\n<p>The shared nature of the wireless medium induces contention between data transport and backward signaling, such as acknowledgement. The current way of TCP acknowledgment induces control overhead which is counter-productive for TCP performance especially in wireless local area network (WLAN) scenarios. In this paper, we present a new acknowledgement called TACK (&ldquo;Tame ACK&rdquo;), as well as its TCP implementation TCP-TACK. TCP-TACK works on top of commodity WLAN, delivering high wireless transport goodput with minimal control overhead in the form of ACKs, without any hardware modification. To minimize ACK frequency, TACK abandons the legacy received-packet-driven ACK. Instead, it balances byte-counting ACK and periodic ACK so as to achieve a controlled ACK frequency. Evaluation results show that TCP-TACK achieves significant advantages over legacy TCP in WLAN scenarios due to less contention between data packets and ACKs. Specifically, TCP-TACK reduces over 90% of ACKs and also obtains an improvement of ∼28% on goodput. We further find it performs equally well as high-speed TCP variants in wide area network (WAN) scenarios, this is attributed to the advancements of the TACK-based protocol design in loss recovery, round-trip timing, and send rate control.</p>\n\n<figure><img loading=\"lazy\" src=\"/images/project_tack.webp\"\n         alt=\"Performance evaluation of TACK.\"/><figcaption>\n            <p>Performance evaluation of TACK.</p>\n        </figcaption>\n</figure>",
+    "image": "/images/project_tack.webp",
+    "links": [
+      {
+        "label": "Github",
+        "url": "https://github.com/superlitong/fillp-demo"
+      },
+      {
+        "label": "Video and Slides",
+        "url": "https://github.com/superlitong/tack-paper-slides-video"
+      }
+    ],
+    "publications": [
+      "pub-32",
+      "pub-47",
+      "pub-48"
+    ]
+  },
+  {
+    "slug": "art",
+    "name": "ART",
+    "headline": "Every packet matters.",
+    "category": "Loss recovery",
+    "summary": "Adaptive retransmission for wide-area loss recovery in the wild.",
+    "body": "<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/litonglab/quic-art\"> [Github] </a></p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/litonglab/quic-art/tree/main/slides\"> [A demo application] </a></p>\n<h2>Abstract</h2>\n<p>Packet losses significantly impact the user experience of wide-area applications such as content distribution and remote procedure call (RPC) based services. However, our production network measurement studies show that the legacy loss recovery is far from satisfactory due to the wide-area loss characteristics (i.e., dynamics and burstiness) in the wild. In this paper, we propose a sender-side Adaptive ReTransmission scheme, ART, which minimizes the recovery time of lost packets with minimal redundancy cost. Distinguishing itself from forward- error-correction (FEC), which preemptively sends redundant data packets to prevent loss, ART functions as an automatic- repeat-request (ARQ) scheme. It applies redundancy specifically to lost packets instead of unlost packets, thereby addressing the characteristic patterns of wide-area losses in real-world scenarios. We implement ART upon QUIC protocol and evaluate it via both trace-driven emulation and real-world deployment. The results show that ART reduces up to 34% of flow completion time (FCT) for delay-sensitive transmissions, improves up to 28% of goodput for throughput-intensive transmissions, and saves up to 90% of redundancy cost.</p>\n\n<figure><img loading=\"lazy\" src=\"/images/project_art.webp\"\n         alt=\"Key modules of ART\"/><figcaption>\n            <p>Key modules of ART</p>\n        </figcaption>\n</figure>",
+    "image": "/images/project_art.webp",
+    "links": [
+      {
+        "label": "Github",
+        "url": "https://github.com/litonglab/quic-art"
+      },
+      {
+        "label": "A demo application",
+        "url": "https://github.com/litonglab/quic-art/tree/main/slides"
+      },
+      {
+        "label": "paper",
+        "url": "http://iir.ruc.edu.cn/~litong/papers/Toward%20Optimal%20Broadcast%20Mode%20in%20Offline%20Finding%20Network-TMC-full.pdf"
+      }
+    ],
+    "publications": [
+      "pub-20",
+      "pub-41",
+      "pub-42"
+    ]
+  },
+  {
+    "slug": "blender",
+    "name": "Blender",
+    "headline": "Discover. Simulate. Connect.",
+    "category": "Wireless systems",
+    "summary": "A practical simulation framework for Bluetooth Low-Energy neighbor discovery.",
+    "body": "<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/litonglab/blender-neighbor-discovery\"> [Github] </a></p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://algospace.top/algorithm/blender_as_a_service/v1.0/\"> [A demo application] </a></p>\n<h2>Abstract</h2>\n<p>In the widely used Bluetooth Low-Energy (BLE) neighbor discovery, the parameter configuration of neighbor discovery directly decides the results of the trade-off between discovery latency and power consumption. Therefore, it requires evaluating whether any given parameter configuration meets the demands. The existing solutions, however, are far from satisfactory due to unsolved issues.</p>\n<p>Blender, a simulation framework that produces a determined and full probabilistic distribution of discovery latency for a given parameter configuration. To capture the key features in practice, Blender provides adaption to the stochastic factors such as the channel collision and the random behavior of the advertiser.</p>\n\n<figure><img loading=\"lazy\" src=\"/images/project_blender.webp\"\n         alt=\"Overview of the Blender Architecture\"/><figcaption>\n            <p>Overview of the Blender Architecture</p>\n        </figcaption>\n</figure>",
+    "image": "/images/project_blender.webp",
+    "links": [
+      {
+        "label": "Github",
+        "url": "https://github.com/litonglab/blender-neighbor-discovery"
+      },
+      {
+        "label": "A demo application",
+        "url": "https://algospace.top/algorithm/blender_as_a_service/v1.0/"
+      }
+    ],
+    "publications": [
+      "pub-25",
+      "pub-23"
+    ]
+  },
+  {
+    "slug": "find",
+    "name": "FiND",
+    "headline": "A smarter way to discover.",
+    "category": "Wireless systems",
+    "summary": "Accelerating BLE neighbor discovery via Wi-Fi fingerprints.",
+    "body": "<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/litonglab/find\"> [Github] </a></p>\n<h2>Abstract</h2>\n<p>FiND is a novel neighbor discovery protocol that accelerates BLE neighbor discovery via Wi-Fi fingerprints without any hardware modifications. The design rationale of FiND is that the two modes of WiFi and BLE show complementarity in both wireless interference and discovery pattern. When abstracting the neighbor discovery problem, this demonstration provides validation for the approach of reasoning-based presence detection in the real world.</p>\n\n<figure><img loading=\"lazy\" src=\"/images/project_find.webp\"\n         alt=\"The basic workflow of FiND.\"/><figcaption>\n            <p>The basic workflow of FiND.</p>\n        </figcaption>\n</figure>",
+    "image": "/images/project_find.webp",
+    "links": [
+      {
+        "label": "Github",
+        "url": "https://github.com/litonglab/find"
+      }
+    ],
+    "publications": [
+      "pub-24"
+    ]
+  },
+  {
+    "slug": "autorec",
+    "name": "AutoRec",
+    "headline": "Keep the world streaming.",
+    "category": "Live streaming",
+    "summary": "Timeliness-enhanced loss recovery for large-scale live streaming.",
+    "body": "<h2>Abstract</h2>\n<p>Due to the limited permissions for upgrading dual-side (i.e., server-side and client-side) loss tolerance schemes from the perspective of CDN vendors in a multi-supplier market, modern large-scale live streaming services are still using the automatic-repeat-request (ARQ) based paradigm for loss recovery, which only requires server-side modifications. In this paper, we first conduct a large-scale measurement study with up to 50 million live streams. We find that loss shows dynamics and live streaming contains frequent on-off mode switching in the wild. We further find that the recovery latency, enlarged by the ubiquitous retransmission loss, is a critical factor affecting live streaming&rsquo;s client-side QoE (e.g., video freezing). We then propose an enhanced recovery mechanism called AutoRec, which can transform the disadvantages of on-off mode switching into an advantage for reducing loss recovery latency without any modifications on the client side. AutoRec also adopts an online learning-based policy to fit the dynamics of loss, balancing the tradeoff between the recovery latency and the incurred overhead. We implement AutoRec upon QUIC and evaluate it via both testbed and real-world commercial services deployments. The experimental results demonstrate the practicability and profitability of AutoRec, in which the average 95th-percentile times and duration of client-side video freezing can be lowered by 11.4% and 5.2%, respectively.</p>\n\n<figure><img loading=\"lazy\" src=\"/images/project_autorec.webp\"\n         alt=\"Key modules of AutoRec\"/><figcaption>\n            <p>Key modules of AutoRec</p>\n        </figcaption>\n</figure>",
+    "image": "/images/project_autorec.webp",
+    "links": [],
+    "publications": [
+      "pub-22",
+      "pub-16",
+      "pub-39"
+    ]
+  },
+  {
+    "slug": "transhub",
+    "name": "Transhub",
+    "headline": "Learn networks. Build one.",
+    "category": "Network education",
+    "summary": "中国人民大学「一人一栈」传输协议训练平台。",
+    "body": "<h2>Abstract</h2>\n<p>Transhub：中国人民大学“一人一栈”训练平台。该平台是一个传输协议的训练平台，旨在通过实践加深学生对计算机网络、传输控制协议的理解。平台包括完整的用户模块、日志管理、管理员模块和任务队列等功能，用户可提交自己设计的算法用于评测。具体来说，平台测评核心模块用户态协议框架Transhub基于UDP协议进行实现，提供传输协议基本的功能模块，如序号、包类型、确认机制等，并提供如发送、接收等预制的接口API。 用户需要在该框架上，修改controller.cc代码中的内容，实现一个拥塞控制算法，尽可能地提高网络性能。平台通过模拟不同的网络环境， 并针对丢包、时延和吞吐量三个维度进行综合评分，对用户提供的拥塞控制算法进行评估。</p>\n<p>Transhub: The &ldquo;One Person, One Stack&rdquo; Training Platform at Renmin University of China. This platform serves as a training environment for transmission protocols, designed to deepen students' understanding of computer networks and transmission control protocols through hands‑on practice. It includes comprehensive functional modules such as user management, log administration, administrator controls, and task queues, allowing users to submit their own designed algorithms for evaluation. Specifically, the core evaluation module of the platform—the user‑space protocol framework Transhub—is implemented based on the UDP protocol. It provides fundamental functional components of a transmission protocol, including sequence numbers, packet types, acknowledgment mechanisms, and pre‑defined interface APIs such as sending and receiving. Users are required to modify the code in controller.cc on this framework to implement a congestion control algorithm that strives to maximize network performance. The platform evaluates the submitted congestion control algorithms by simulating diverse network environments and scoring them comprehensively based on three dimensions: packet loss, latency, and throughput.</p>\n<h2>Access</h2>\n<ul>\n<li>\n<p><strong>外网访问</strong>：<br>\n<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://transhub.litonglab.com\">https://transhub.litonglab.com</a></p>\n</li>\n<li>\n<p><strong>内网访问（校内网络）</strong>：<br>\n<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://net.ruc.edu.cn\">http://net.ruc.edu.cn</a></p>\n</li>\n</ul>\n<h2>Reference</h2>\n<ul>\n<li>\n<p>Github前端 <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/litonglab/transhub_frontend\">https://github.com/litonglab/transhub_frontend</a></p>\n</li>\n<li>\n<p>Github后端 <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/litonglab/transhub_backend\">https://github.com/litonglab/transhub_backend</a></p>\n</li>\n</ul>\n<p><figure><img alt=\"Original project illustration\" loading=\"lazy\" src=\"/images/project_transhub01.webp\"/>\n</figure>\n\n<figure><img alt=\"Original project illustration\" loading=\"lazy\" src=\"/images/project_transhub02.webp\"/>\n</figure>\n\n<figure><img alt=\"Original project illustration\" loading=\"lazy\" src=\"/images/project_transhub03.webp\"/>\n</figure>\n\n<figure><img alt=\"Original project illustration\" loading=\"lazy\" src=\"/images/project_transhub04.webp\"/>\n</figure>\n\n<figure><img alt=\"Original project illustration\" loading=\"lazy\" src=\"/images/project_transhub05.webp\"/>\n</figure>\n\n<figure><img alt=\"Original project illustration\" loading=\"lazy\" src=\"/images/project_transhub06.webp\"/>\n</figure>\n</p>",
+    "image": "/images/project_transhub01.webp",
+    "links": [
+      {
+        "label": "https://transhub.litonglab.com",
+        "url": "https://transhub.litonglab.com"
+      },
+      {
+        "label": "http://net.ruc.edu.cn",
+        "url": "http://net.ruc.edu.cn"
+      },
+      {
+        "label": "https://github.com/litonglab/transhub_frontend",
+        "url": "https://github.com/litonglab/transhub_frontend"
+      },
+      {
+        "label": "https://github.com/litonglab/transhub_backend",
+        "url": "https://github.com/litonglab/transhub_backend"
+      }
+    ],
+    "publications": []
+  }
+]

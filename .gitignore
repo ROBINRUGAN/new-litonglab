@@ -1,0 +1,17 @@
+# designed by mew
+# Runtime data, credentials, backups and uploads belong outside source control.
+var/
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+node_modules/
+frontend/dist/
+.playwright-cli/
+output/
+*.log
+releases/
+.ruff_cache/

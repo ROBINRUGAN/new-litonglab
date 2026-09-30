@@ -1,0 +1,24 @@
+# designed by mew
+[Unit]
+Description=LitongLab content service
+After=network.target
+
+[Service]
+Type=simple
+User=litonglab
+Group=www-data
+WorkingDirectory=/srv/litonglab/current
+EnvironmentFile=/etc/litonglab.env
+Environment=PYTHONDONTWRITEBYTECODE=1
+ExecStart=/srv/litonglab/current/.venv/bin/gunicorn --chdir backend config.wsgi:application --bind 127.0.0.1:8000 --workers 1 --threads 2 --timeout 120 --access-logfile - --error-logfile -
+Restart=on-failure
+RestartSec=5
+UMask=0027
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/litonglab
+
+[Install]
+WantedBy=multi-user.target

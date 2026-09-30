@@ -1,0 +1,316 @@
+{
+  "projects": {
+    "tack": {
+      "en": "<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/superlitong/fillp-demo\"> [Github] </a></p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/superlitong/tack-paper-slides-video\"> [Video and Slides] </a></p>\n<h2>Abstract</h2>\n<p>The shared nature of the wireless medium induces contention between data transport and backward signaling, such as acknowledgement. The current way of TCP acknowledgment induces control overhead which is counter-productive for TCP performance especially in wireless local area network (WLAN) scenarios. In this paper, we present a new acknowledgement called TACK (&ldquo;Tame ACK&rdquo;), as well as its TCP implementation TCP-TACK. TCP-TACK works on top of commodity WLAN, delivering high wireless transport goodput with minimal control overhead in the form of ACKs, without any hardware modification. To minimize ACK frequency, TACK abandons the legacy received-packet-driven ACK. Instead, it balances byte-counting ACK and periodic ACK so as to achieve a controlled ACK frequency. Evaluation results show that TCP-TACK achieves significant advantages over legacy TCP in WLAN scenarios due to less contention between data packets and ACKs. Specifically, TCP-TACK reduces over 90% of ACKs and also obtains an improvement of ∼28% on goodput. We further find it performs equally well as high-speed TCP variants in wide area network (WAN) scenarios, this is attributed to the advancements of the TACK-based protocol design in loss recovery, round-trip timing, and send rate control.</p>\n\n<figure><img loading=\"lazy\" src=\"/images/project_tack.webp\"\n         alt=\"Performance evaluation of TACK.\"/><figcaption>\n            <p>Performance evaluation of TACK.</p>\n        </figcaption>\n</figure>",
+      "zh": "<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/superlitong/fillp-demo\"> [Github] </a></p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/superlitong/tack-paper-slides-video\"> [Video and Slides] </a></p>\n<h2>Abstract</h2><p>无线介质的共享特性使数据传输与确认报文等反向信令之间产生竞争。现有 TCP 确认方式带来的控制开销不利于传输性能，这一问题在无线局域网（WLAN）场景中尤为突出。我们提出了新的确认机制 TACK（Tame ACK），以及相应的 TCP 实现 TCP-TACK。TCP-TACK 无需修改硬件，即可在商用 WLAN 上以较低的 ACK 控制开销获得较高的有效吞吐量。</p><p>为降低 ACK 频率，TACK 不再完全由接收到的数据包驱动确认，而是在按字节计数确认和周期性确认之间进行平衡，使 ACK 频率可控。实验结果表明，TCP-TACK 减少了数据包与 ACK 之间的竞争，在 WLAN 场景中显著优于传统 TCP：ACK 数量减少超过 90%，有效吞吐量提高约 28%。在广域网（WAN）场景中，其性能也可与高速 TCP 变体相当，这得益于 TACK 在丢包恢复、往返时延测量和发送速率控制方面的协议设计。</p>\n<figure><img loading=\"lazy\" src=\"/images/project_tack.webp\"\n         alt=\"Performance evaluation of TACK.\"/><figcaption>\n            <p>Performance evaluation of TACK.</p>\n        </figcaption>\n</figure>"
+    },
+    "art": {
+      "en": "<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/litonglab/quic-art\"> [Github] </a></p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/litonglab/quic-art/tree/main/slides\"> [A demo application] </a></p>\n<h2>Abstract</h2>\n<p>Packet losses significantly impact the user experience of wide-area applications such as content distribution and remote procedure call (RPC) based services. However, our production network measurement studies show that the legacy loss recovery is far from satisfactory due to the wide-area loss characteristics (i.e., dynamics and burstiness) in the wild. In this paper, we propose a sender-side Adaptive ReTransmission scheme, ART, which minimizes the recovery time of lost packets with minimal redundancy cost. Distinguishing itself from forward- error-correction (FEC), which preemptively sends redundant data packets to prevent loss, ART functions as an automatic- repeat-request (ARQ) scheme. It applies redundancy specifically to lost packets instead of unlost packets, thereby addressing the characteristic patterns of wide-area losses in real-world scenarios. We implement ART upon QUIC protocol and evaluate it via both trace-driven emulation and real-world deployment. The results show that ART reduces up to 34% of flow completion time (FCT) for delay-sensitive transmissions, improves up to 28% of goodput for throughput-intensive transmissions, and saves up to 90% of redundancy cost.</p>\n\n<figure><img loading=\"lazy\" src=\"/images/project_art.webp\"\n         alt=\"Key modules of ART\"/><figcaption>\n            <p>Key modules of ART</p>\n        </figcaption>\n</figure>",
+      "zh": "<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/litonglab/quic-art\"> [Github] </a></p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/litonglab/quic-art/tree/main/slides\"> [A demo application] </a></p>\n<h2>Abstract</h2><p>丢包会显著影响内容分发、基于远程过程调用（RPC）的服务等广域网应用的用户体验。然而，对生产网络的测量表明，实际广域网丢包具有动态性和突发性，现有丢包恢复机制的效果并不理想。我们提出发送端自适应重传方案 ART，以尽可能低的冗余开销缩短丢失数据包的恢复时间。</p><p>前向纠错（FEC）通过提前发送冗余数据包防止丢失；ART 则采用自动重传请求（ARQ）机制，仅针对已经丢失的数据包引入冗余，而不为未丢失的数据包增加冗余，以适应真实广域网中的丢包模式。我们在 QUIC 协议上实现 ART，并通过基于真实轨迹的仿真和实际部署进行评估。结果表明，ART 可将时延敏感传输的流完成时间（FCT）最多降低 34%，将吞吐量敏感传输的有效吞吐量最多提高 28%，并将冗余开销最多降低 90%。</p>\n<figure><img loading=\"lazy\" src=\"/images/project_art.webp\"\n         alt=\"Key modules of ART\"/><figcaption>\n            <p>Key modules of ART</p>\n        </figcaption>\n</figure>"
+    },
+    "blender": {
+      "en": "<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/litonglab/blender-neighbor-discovery\"> [Github] </a></p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://algospace.top/algorithm/blender_as_a_service/v1.0/\"> [A demo application] </a></p>\n<h2>Abstract</h2>\n<p>In the widely used Bluetooth Low-Energy (BLE) neighbor discovery, the parameter configuration of neighbor discovery directly decides the results of the trade-off between discovery latency and power consumption. Therefore, it requires evaluating whether any given parameter configuration meets the demands. The existing solutions, however, are far from satisfactory due to unsolved issues.</p>\n<p>Blender, a simulation framework that produces a determined and full probabilistic distribution of discovery latency for a given parameter configuration. To capture the key features in practice, Blender provides adaption to the stochastic factors such as the channel collision and the random behavior of the advertiser.</p>\n\n<figure><img loading=\"lazy\" src=\"/images/project_blender.webp\"\n         alt=\"Overview of the Blender Architecture\"/><figcaption>\n            <p>Overview of the Blender Architecture</p>\n        </figcaption>\n</figure>",
+      "zh": "<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/litonglab/blender-neighbor-discovery\"> [Github] </a></p>\n<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://algospace.top/algorithm/blender_as_a_service/v1.0/\"> [A demo application] </a></p>\n<h2>Abstract</h2><p>在广泛使用的低功耗蓝牙（BLE）邻居发现过程中，参数配置直接决定发现时延与功耗之间的权衡，因此需要评估给定参数配置能否满足实际需求。现有方案仍存在尚未解决的问题，难以充分满足这一需求。</p><p>Blender 是一个仿真框架，能够针对给定参数配置，计算确定的、完整的发现时延概率分布。为刻画实际环境中的关键特性，Blender 支持信道碰撞、广播设备随机行为等随机因素。</p>\n<figure><img loading=\"lazy\" src=\"/images/project_blender.webp\"\n         alt=\"Overview of the Blender Architecture\"/><figcaption>\n            <p>Overview of the Blender Architecture</p>\n        </figcaption>\n</figure>"
+    },
+    "find": {
+      "en": "<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/litonglab/find\"> [Github] </a></p>\n<h2>Abstract</h2>\n<p>FiND is a novel neighbor discovery protocol that accelerates BLE neighbor discovery via Wi-Fi fingerprints without any hardware modifications. The design rationale of FiND is that the two modes of WiFi and BLE show complementarity in both wireless interference and discovery pattern. When abstracting the neighbor discovery problem, this demonstration provides validation for the approach of reasoning-based presence detection in the real world.</p>\n\n<figure><img loading=\"lazy\" src=\"/images/project_find.webp\"\n         alt=\"The basic workflow of FiND.\"/><figcaption>\n            <p>The basic workflow of FiND.</p>\n        </figcaption>\n</figure>",
+      "zh": "<p><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/litonglab/find\"> [Github] </a></p>\n<h2>Abstract</h2><p>FiND 是一种新型邻居发现协议，无需修改硬件，即可利用 Wi-Fi 指纹加速 BLE 邻居发现。其设计利用了 Wi-Fi 与 BLE 在无线干扰和发现模式上的互补性。该演示对邻居发现问题进行抽象，并在真实环境中验证了基于推理的存在检测方法。</p>\n<figure><img loading=\"lazy\" src=\"/images/project_find.webp\"\n         alt=\"The basic workflow of FiND.\"/><figcaption>\n            <p>The basic workflow of FiND.</p>\n        </figcaption>\n</figure>"
+    },
+    "autorec": {
+      "en": "<h2>Abstract</h2>\n<p>Due to the limited permissions for upgrading dual-side (i.e., server-side and client-side) loss tolerance schemes from the perspective of CDN vendors in a multi-supplier market, modern large-scale live streaming services are still using the automatic-repeat-request (ARQ) based paradigm for loss recovery, which only requires server-side modifications. In this paper, we first conduct a large-scale measurement study with up to 50 million live streams. We find that loss shows dynamics and live streaming contains frequent on-off mode switching in the wild. We further find that the recovery latency, enlarged by the ubiquitous retransmission loss, is a critical factor affecting live streaming&rsquo;s client-side QoE (e.g., video freezing). We then propose an enhanced recovery mechanism called AutoRec, which can transform the disadvantages of on-off mode switching into an advantage for reducing loss recovery latency without any modifications on the client side. AutoRec also adopts an online learning-based policy to fit the dynamics of loss, balancing the tradeoff between the recovery latency and the incurred overhead. We implement AutoRec upon QUIC and evaluate it via both testbed and real-world commercial services deployments. The experimental results demonstrate the practicability and profitability of AutoRec, in which the average 95th-percentile times and duration of client-side video freezing can be lowered by 11.4% and 5.2%, respectively.</p>\n\n<figure><img loading=\"lazy\" src=\"/images/project_autorec.webp\"\n         alt=\"Key modules of AutoRec\"/><figcaption>\n            <p>Key modules of AutoRec</p>\n        </figcaption>\n</figure>",
+      "zh": "<h2>Abstract</h2><p>在多供应商市场中，CDN 厂商通常难以同时升级服务端与客户端的丢包容错方案。因此，现代大规模直播服务仍采用只需修改服务端的自动重传请求（ARQ）机制进行丢包恢复。我们首先开展了覆盖多达 5,000 万条直播流的大规模测量，发现真实网络中的丢包具有动态性，且直播流频繁切换突发发送与空闲状态。进一步分析表明，普遍存在的重传丢包会放大恢复时延，是影响客户端体验质量（QoE）、引发视频卡顿的关键因素。</p><p>我们提出增强型恢复机制 AutoRec，无需修改客户端，即可利用流量发送与空闲状态切换的特性降低丢包恢复时延。AutoRec 还采用基于在线学习的策略适应动态丢包，在恢复时延与额外开销之间取得平衡。我们在 QUIC 上实现 AutoRec，并在测试床和真实商业服务中进行部署评估。实验表明，AutoRec 具有实际可用性和收益，客户端视频卡顿次数与时长的第 95 百分位统计量的平均值分别降低 11.4% 和 5.2%。</p>\n<figure><img loading=\"lazy\" src=\"/images/project_autorec.webp\"\n         alt=\"Key modules of AutoRec\"/><figcaption>\n            <p>Key modules of AutoRec</p>\n        </figcaption>\n</figure>"
+    },
+    "transhub": {
+      "en": "<h2>Abstract</h2>\n\n<p>Transhub: The &ldquo;One Person, One Stack&rdquo; Training Platform at Renmin University of China. This platform serves as a training environment for transmission protocols, designed to deepen students' understanding of computer networks and transmission control protocols through hands‑on practice. It includes comprehensive functional modules such as user management, log administration, administrator controls, and task queues, allowing users to submit their own designed algorithms for evaluation. Specifically, the core evaluation module of the platform—the user‑space protocol framework Transhub—is implemented based on the UDP protocol. It provides fundamental functional components of a transmission protocol, including sequence numbers, packet types, acknowledgment mechanisms, and pre‑defined interface APIs such as sending and receiving. Users are required to modify the code in controller.cc on this framework to implement a congestion control algorithm that strives to maximize network performance. The platform evaluates the submitted congestion control algorithms by simulating diverse network environments and scoring them comprehensively based on three dimensions: packet loss, latency, and throughput.</p>\n<h2>Access</h2>\n<ul>\n<li>\n<p><strong>Public access</strong>:<br>\n<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://transhub.litonglab.com\">https://transhub.litonglab.com</a></p>\n</li>\n<li>\n<p><strong>Campus network access</strong>:<br>\n<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://net.ruc.edu.cn\">http://net.ruc.edu.cn</a></p>\n</li>\n</ul>\n<h2>Reference</h2>\n<ul>\n<li>\n<p>GitHub frontend <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/litonglab/transhub_frontend\">https://github.com/litonglab/transhub_frontend</a></p>\n</li>\n<li>\n<p>GitHub backend <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/litonglab/transhub_backend\">https://github.com/litonglab/transhub_backend</a></p>\n</li>\n</ul>\n<p><figure><img alt=\"Original project illustration\" loading=\"lazy\" src=\"/images/project_transhub01.webp\"/>\n</figure>\n\n<figure><img alt=\"Original project illustration\" loading=\"lazy\" src=\"/images/project_transhub02.webp\"/>\n</figure>\n\n<figure><img alt=\"Original project illustration\" loading=\"lazy\" src=\"/images/project_transhub03.webp\"/>\n</figure>\n\n<figure><img alt=\"Original project illustration\" loading=\"lazy\" src=\"/images/project_transhub04.webp\"/>\n</figure>\n\n<figure><img alt=\"Original project illustration\" loading=\"lazy\" src=\"/images/project_transhub05.webp\"/>\n</figure>\n\n<figure><img alt=\"Original project illustration\" loading=\"lazy\" src=\"/images/project_transhub06.webp\"/>\n</figure>\n</p>",
+      "zh": "<h2>Abstract</h2>\n<p>Transhub：中国人民大学“一人一栈”训练平台。该平台是一个传输协议的训练平台，旨在通过实践加深学生对计算机网络、传输控制协议的理解。平台包括完整的用户模块、日志管理、管理员模块和任务队列等功能，用户可提交自己设计的算法用于评测。具体来说，平台测评核心模块用户态协议框架Transhub基于UDP协议进行实现，提供传输协议基本的功能模块，如序号、包类型、确认机制等，并提供如发送、接收等预制的接口API。 用户需要在该框架上，修改controller.cc代码中的内容，实现一个拥塞控制算法，尽可能地提高网络性能。平台通过模拟不同的网络环境， 并针对丢包、时延和吞吐量三个维度进行综合评分，对用户提供的拥塞控制算法进行评估。</p>\n\n<h2>Access</h2>\n<ul>\n<li>\n<p><strong>外网访问</strong>：<br>\n<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://transhub.litonglab.com\">https://transhub.litonglab.com</a></p>\n</li>\n<li>\n<p><strong>内网访问（校内网络）</strong>：<br>\n<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://net.ruc.edu.cn\">http://net.ruc.edu.cn</a></p>\n</li>\n</ul>\n<h2>Reference</h2>\n<ul>\n<li>\n<p>Github前端 <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/litonglab/transhub_frontend\">https://github.com/litonglab/transhub_frontend</a></p>\n</li>\n<li>\n<p>Github后端 <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/litonglab/transhub_backend\">https://github.com/litonglab/transhub_backend</a></p>\n</li>\n</ul>\n<p><figure><img alt=\"Original project illustration\" loading=\"lazy\" src=\"/images/project_transhub01.webp\"/>\n</figure>\n\n<figure><img alt=\"Original project illustration\" loading=\"lazy\" src=\"/images/project_transhub02.webp\"/>\n</figure>\n\n<figure><img alt=\"Original project illustration\" loading=\"lazy\" src=\"/images/project_transhub03.webp\"/>\n</figure>\n\n<figure><img alt=\"Original project illustration\" loading=\"lazy\" src=\"/images/project_transhub04.webp\"/>\n</figure>\n\n<figure><img alt=\"Original project illustration\" loading=\"lazy\" src=\"/images/project_transhub05.webp\"/>\n</figure>\n\n<figure><img alt=\"Original project illustration\" loading=\"lazy\" src=\"/images/project_transhub06.webp\"/>\n</figure>\n</p>"
+    }
+  },
+  "news": {
+    "计算机网络教学研究论文《一人一栈：计算机网络课程赛教融合训练实践》荣获2026年全国高等学校计算机课程教育大会优秀论文特等奖（最高奖，比例：5%）.": {
+      "en": "Our paper on computer networking education, “One Person, One Stack: Integrating Competitions and Teaching in Computer Networking,” received the top Outstanding Paper Award at the 2026 National Conference on Computer Course Education in Higher Education (top 5%).",
+      "zh": "计算机网络教学研究论文《一人一栈：计算机网络课程赛教融合训练实践》荣获2026年全国高等学校计算机课程教育大会优秀论文特等奖（最高奖，比例：5%）."
+    },
+    "实验室成员徐都玲获得了2026年CCF博士生资助计划（全国仅10个）。": {
+      "en": "Duling Xu received support from the 2026 CCF PhD Student Funding Program, awarded to just 10 students nationwide.",
+      "zh": "实验室成员徐都玲获得了2026年CCF博士生资助计划（全国仅10个）。"
+    },
+    "实验室成员闫旭获评 “北京市优秀毕业生”奖励。": {
+      "en": "Xu Yan was named an Outstanding Graduate of Beijing.",
+      "zh": "实验室成员闫旭获评 “北京市优秀毕业生”奖励。"
+    },
+    "罗翌宁、王子佳、胡博玮获得2026年（第19届）中国大学生计算机设计大赛北京市级赛二等奖。": {
+      "en": "Yining Luo, Zijia Wang, and Bowei Hu won second prize in the Beijing division of the 19th Chinese Collegiate Computing Competition (2026).",
+      "zh": "罗翌宁、王子佳、胡博玮获得2026年（第19届）中国大学生计算机设计大赛北京市级赛二等奖。"
+    },
+    "Our paper is accepted by ACM SIGCOMM 2026.": {
+      "en": "Our paper is accepted by ACM SIGCOMM 2026.",
+      "zh": "我们的论文被 ACM SIGCOMM 2026 录用。"
+    },
+    "Our paper is accepted by IEEE TPDS.": {
+      "en": "Our paper is accepted by IEEE TPDS.",
+      "zh": "我们的论文被 IEEE TPDS 录用。"
+    },
+    "Two papers are accepted by IEEE/ACM IWQoS 2026.": {
+      "en": "Two papers are accepted by IEEE/ACM IWQoS 2026.",
+      "zh": "我们的两篇论文被 IEEE/ACM IWQoS 2026 录用。"
+    },
+    "Our paper is accepted by APNet 2026.": {
+      "en": "Our paper is accepted by APNet 2026.",
+      "zh": "我们的论文被 APNet 2026 录用。"
+    },
+    "Our NSDI paper’s presentation video has become very popular. PRED: Performance-oriented Random Early Detection for Consistently Stable Performance in Datacenters": {
+      "en": "Our NSDI paper’s presentation video has become very popular. PRED: Performance-oriented Random Early Detection for Consistently Stable Performance in Datacenters",
+      "zh": "我们的 NSDI 论文报告视频受到广泛关注：PRED: Performance-oriented Random Early Detection for Consistently Stable Performance in Datacenters。"
+    },
+    "Our paper is accepted by ACM SIGMOD 2026.": {
+      "en": "Our paper is accepted by ACM SIGMOD 2026.",
+      "zh": "我们的论文被 ACM SIGMOD 2026 录用。"
+    },
+    "Our paper is accepted by IEEE TON.": {
+      "en": "Our paper is accepted by IEEE TON.",
+      "zh": "我们的论文被 IEEE TON 录用。"
+    },
+    "第三届CCF中国网络大会（ChinaNet-2025）- 智能体与未来网络融合创新分论坛 ，将于2025年9月14日14:00-17:30，在沈阳香格里拉大酒店2F宴会2召开.": {
+      "en": "The “Agents and Future Networks” forum at the third CCF ChinaNet conference will take place from 14:00 to 17:30 on September 14, 2025, in Banquet Hall 2, 2F, Shangri-La Shenyang.",
+      "zh": "第三届CCF中国网络大会（ChinaNet-2025）- 智能体与未来网络融合创新分论坛 ，将于2025年9月14日14:00-17:30，在沈阳香格里拉大酒店2F宴会2召开."
+    },
+    "Our paper is selected as the Outstanding Paper Award by CCF ChinaNet 2025.": {
+      "en": "Our paper is selected as the Outstanding Paper Award by CCF ChinaNet 2025.",
+      "zh": "我们的论文获得 CCF ChinaNet 2025 优秀论文奖。"
+    },
+    "Our paper is accepted by USENIX NSDI 2026.": {
+      "en": "Our paper is accepted by USENIX NSDI 2026.",
+      "zh": "我们的论文被 USENIX NSDI 2026 录用。"
+    },
+    "计算机网络教学改革项目获评教育部\"101计划\"优秀教材试点应用项目.": {
+      "en": "Our computer networking teaching reform project was selected for the Ministry of Education’s “101 Plan” outstanding textbook pilot application program.",
+      "zh": "计算机网络教学改革项目获评教育部\"101计划\"优秀教材试点应用项目."
+    },
+    "《广域确定性网络传输技术综述》论文视频入选了《软件学报》高传播力视频Top10（10/42） video": {
+      "en": "The video accompanying our survey of wide-area deterministic network transport technologies was selected among the Journal of Software’s Top 10 most widely disseminated videos (10 of 42).",
+      "zh": "《广域确定性网络传输技术综述》论文视频入选了《软件学报》高传播力视频Top10（10/42） video"
+    },
+    "Our team member Liu Wei has been awarded the title of ‘北京市优秀毕业生’.": {
+      "en": "Our team member Wei Liu was named an Outstanding Graduate of Beijing.",
+      "zh": "实验室成员刘威获评“北京市优秀毕业生”。"
+    },
+    "Our paper is accepted by IEEE/ACM IWQoS 2025.": {
+      "en": "Our paper is accepted by IEEE/ACM IWQoS 2025.",
+      "zh": "我们的论文被 IEEE/ACM IWQoS 2025 录用。"
+    },
+    "Our paper is accepted by ACM SIGCOMM 2025.": {
+      "en": "Our paper is accepted by ACM SIGCOMM 2025.",
+      "zh": "我们的论文被 ACM SIGCOMM 2025 录用。"
+    },
+    "Our paper is accepted by IEEE/ACM TON.": {
+      "en": "Our paper is accepted by IEEE/ACM TON.",
+      "zh": "我们的论文被 IEEE/ACM TON 录用。"
+    },
+    "Our paper is accepted by IEEE TC.": {
+      "en": "Our paper is accepted by IEEE TC.",
+      "zh": "我们的论文被 IEEE TC 录用。"
+    },
+    "ACM SIGCOMM 2025 Workshop [Call for paper]: Submission deadline May 8th, 2025 [ The 3rd Workshop on Emerging Multimedia Systems (EMS) ]": {
+      "en": "ACM SIGCOMM 2025 Workshop [Call for paper]: Submission deadline May 8th, 2025 [ The 3rd Workshop on Emerging Multimedia Systems (EMS) ]",
+      "zh": "ACM SIGCOMM 2025 研讨会征稿：第三届新兴多媒体系统研讨会（EMS），投稿截止时间为 2025 年 5 月 8 日。"
+    },
+    "Our paper is accepted by IEEE TMC.": {
+      "en": "Our paper is accepted by IEEE TMC.",
+      "zh": "我们的论文被 IEEE TMC 录用。"
+    },
+    "Two of our papers are accepted by IEEE INFOCOM Demo 2025.": {
+      "en": "Two of our papers are accepted by IEEE INFOCOM Demo 2025.",
+      "zh": "我们的两篇论文被 IEEE INFOCOM Demo 2025 录用。"
+    },
+    "Two of our papers are accepted by IEEE INFOCOM 2025.": {
+      "en": "Two of our papers are accepted by IEEE INFOCOM 2025.",
+      "zh": "我们的两篇论文被 IEEE INFOCOM 2025 录用。"
+    },
+    "Our paper is accepted by IEEE ICDE 2025.": {
+      "en": "Our paper is accepted by IEEE ICDE 2025.",
+      "zh": "我们的论文被 IEEE ICDE 2025 录用。"
+    },
+    "I was invited to give a talk in 中国网络大会（ChinaNet）.": {
+      "en": "Professor Tong Li was invited to give a talk at ChinaNet.",
+      "zh": "李彤教授受邀在中国网络大会（ChinaNet）作报告。"
+    },
+    "Professor Li was awarded as the ACM SIGCOMM China Rising Star Award (新星奖). (Ranking first)": {
+      "en": "Professor Tong Li received the ACM SIGCOMM China Rising Star Award, ranking first.",
+      "zh": "李彤教授获得 ACM SIGCOMM China 新星奖，排名第一。"
+    },
+    "Our paper is accepted by IEEE S&P 2025. (Acceptance rate 14.3%)": {
+      "en": "Our paper is accepted by IEEE S&P 2025. (Acceptance rate 14.3%)",
+      "zh": "我们的论文被 IEEE S&P 2025 录用，录用率为 14.3%。"
+    },
+    "Our paper is accepted by USENIX NSDI 2025. The first NSDI paper in the history of Renmin University of China.": {
+      "en": "Our paper is accepted by USENIX NSDI 2025. The first NSDI paper in the history of Renmin University of China.",
+      "zh": "我们的论文被 USENIX NSDI 2025 录用，这是中国人民大学首篇 NSDI 论文。"
+    },
+    "Our paper is accepted by ACM Multimedia (MM) 2024 .（Oral paper）": {
+      "en": "Our paper was accepted by ACM Multimedia (MM) 2024 as an oral presentation.",
+      "zh": "我们的论文被 ACM Multimedia（MM）2024 录用，为口头报告论文。"
+    },
+    "“求是学术” 品牌研究项目立项": {
+      "en": "Our “Qiushi Academic” research project was approved.",
+      "zh": "“求是学术” 品牌研究项目立项"
+    },
+    "我们的文章已经被《软件学报》录用.": {
+      "en": "Our paper was accepted by the Journal of Software.",
+      "zh": "我们的文章已经被《软件学报》录用."
+    },
+    "Two of our papers are accepted by IEEE/ACM IWQoS 2024.": {
+      "en": "Two of our papers are accepted by IEEE/ACM IWQoS 2024.",
+      "zh": "我们的两篇论文被 IEEE/ACM IWQoS 2024 录用。"
+    },
+    "Our paper is accepted by IEEE ICDCS 2024.": {
+      "en": "Our paper is accepted by IEEE ICDCS 2024.",
+      "zh": "我们的论文被 IEEE ICDCS 2024 录用。"
+    },
+    "Our paper is accepted by IEEE WISE.": {
+      "en": "Our paper is accepted by IEEE WISE.",
+      "zh": "我们的论文被 IEEE WISE 录用。"
+    },
+    "Our paper is accepted by 中国网络大会.": {
+      "en": "Our paper was accepted by ChinaNet.",
+      "zh": "我们的论文被中国网络大会录用。"
+    },
+    "实验室成员获得第九届中国国际“互联网 + ”大学生创新创业大赛北京赛区复赛产业命题赛道三等奖。": {
+      "en": "Lab members won third prize in the Industry Challenge track of the Beijing regional semifinals of the ninth China International “Internet+” College Students Innovation and Entrepreneurship Competition.",
+      "zh": "实验室成员获得第九届中国国际“互联网 + ”大学生创新创业大赛北京赛区复赛产业命题赛道三等奖。"
+    },
+    "Our two papers are accepted by SIGCOMM'23 Poster and Demos.": {
+      "en": "Our two papers are accepted by SIGCOMM'23 Poster and Demos.",
+      "zh": "我们的两篇论文被 SIGCOMM 2023 Poster 和 Demo 录用。"
+    },
+    "Our paper is accepted by ICNP 2023.": {
+      "en": "Our paper is accepted by ICNP 2023.",
+      "zh": "我们的论文被 ICNP 2023 录用。"
+    },
+    "实验室成员获得2023年“中国高校计算机大赛—网络技术挑战赛（A-ST）”三等奖。 成员：杨兆棋（大二）、曹景堃（大二）、杨艺琳（大二）、胡博文（大二）": {
+      "en": "Lab members won third prize in the 2023 China Collegiate Computing Competition — Network Technology Challenge (A-ST). Team: Zhaoqi Yang, Jingkun Cao, Yilin Yang, and Bowen Hu, all second-year undergraduates.",
+      "zh": "实验室成员获得2023年“中国高校计算机大赛—网络技术挑战赛（A-ST）”三等奖。 成员：杨兆棋（大二）、曹景堃（大二）、杨艺琳（大二）、胡博文（大二）"
+    },
+    "Our paper is accepted by 软件学报.": {
+      "en": "Our paper was accepted by the Journal of Software.",
+      "zh": "我们的论文被《软件学报》录用。"
+    },
+    "Our paper is accepted by IEEE INFOCOM Demo 2023.": {
+      "en": "Our paper is accepted by IEEE INFOCOM Demo 2023.",
+      "zh": "我们的论文被 IEEE INFOCOM Demo 2023 录用。"
+    },
+    "Our paper is accepted by IEEE Communications Magazine.": {
+      "en": "Our paper is accepted by IEEE Communications Magazine.",
+      "zh": "我们的论文被 IEEE Communications Magazine 录用。"
+    },
+    "实验室成员获得2022 年“中国高校计算机大赛—智能交互创新赛”全国总决赛三等奖。 成员：蒋岱均（大二）、曹思源 （大三）、杨兆棋（大二）、刘威（研一）": {
+      "en": "Lab members won third prize in the national finals of the 2022 China Collegiate Computing Competition — Intelligent Interaction Innovation Contest. Team: Daijun Jiang (second-year undergraduate), Siyuan Cao (third-year undergraduate), Zhaoqi Yang (second-year undergraduate), and Wei Liu (first-year master’s student).",
+      "zh": "实验室成员获得2022 年“中国高校计算机大赛—智能交互创新赛”全国总决赛三等奖。 成员：蒋岱均（大二）、曹思源 （大三）、杨兆棋（大二）、刘威（研一）"
+    },
+    "Our paper is accepted by IEEE INFOCOM 2023.": {
+      "en": "Our paper is accepted by IEEE INFOCOM 2023.",
+      "zh": "我们的论文被 IEEE INFOCOM 2023 录用。"
+    },
+    "Our paper is published in CCCF.": {
+      "en": "Our paper is published in CCCF.",
+      "zh": "我们的论文发表于《计算机学会通讯》（CCCF）。"
+    },
+    "Our paper is accepted by ACM MSWiM 2022.": {
+      "en": "Our paper is accepted by ACM MSWiM 2022.",
+      "zh": "我们的论文被 ACM MSWiM 2022 录用。"
+    },
+    "Our paper is accepted by IEEE/ACM Transactions on Networking.": {
+      "en": "Our paper is accepted by IEEE/ACM Transactions on Networking.",
+      "zh": "我们的论文被 IEEE/ACM Transactions on Networking 录用。"
+    },
+    "Our paper is accepted by ACM SIGCOMM 2022 Workshop.": {
+      "en": "Our paper is accepted by ACM SIGCOMM 2022 Workshop.",
+      "zh": "我们的论文被 ACM SIGCOMM 2022 Workshop 录用。"
+    },
+    "Two of our papers are accepted by IEEE WoWMoM 2022​.": {
+      "en": "Two of our papers are accepted by IEEE WoWMoM 2022​.",
+      "zh": "我们的两篇论文被 IEEE WoWMoM 2022 录用。"
+    },
+    ": Gave a talk in the ACM SIGCOMM , which was held virtually (online). Video is recorded.": {
+      "en": "Gave a talk in the ACM SIGCOMM , which was held virtually (online). Video is recorded.",
+      "zh": "在以线上形式举办的 ACM SIGCOMM 作报告，报告视频已录制。"
+    },
+    ": Invited to give a talk in the ACM APNET , which was held virtually (online). Video is recorded.": {
+      "en": "Invited to give a talk in the ACM APNET , which was held virtually (online). Video is recorded.",
+      "zh": "受邀在以线上形式举办的 ACM APNET 作报告，报告视频已录制。"
+    },
+    ": Our paper is accepted by ACM SIGCOMM 2020. This paper introduces TACK, a novel ACK mechanism for Internet transport protocols.": {
+      "en": "Our paper is accepted by ACM SIGCOMM 2020. This paper introduces TACK, a novel ACK mechanism for Internet transport protocols.",
+      "zh": "我们的论文被 ACM SIGCOMM 2020 录用，介绍了面向互联网传输协议的新型确认机制 TACK。"
+    },
+    ": Gave a talk in the ACM SIGCOMM in Budapest, Hungary. Slides are available here .": {
+      "en": "Gave a talk in the ACM SIGCOMM in Budapest, Hungary. Slides are available here .",
+      "zh": "在匈牙利布达佩斯举办的 ACM SIGCOMM 作报告，报告幻灯片已提供。"
+    },
+    ": Invited to give a talk in the ACM APNET in Tsinghua, Beijing.": {
+      "en": "Invited to give a talk in the ACM APNET in Tsinghua, Beijing.",
+      "zh": "受邀在北京清华大学举办的 ACM APNET 作报告。"
+    },
+    ": Our paper is accepted by ACM SIGCOMM 2018.": {
+      "en": "Our paper is accepted by ACM SIGCOMM 2018.",
+      "zh": "我们的论文被 ACM SIGCOMM 2018 录用。"
+    }
+  },
+  "people": {
+    "Le Xie": {
+      "en": "PhD student since 2025",
+      "zh": "2025 级博士研究生"
+    },
+    "Duling Xu": {
+      "en": "PhD student since 2022",
+      "zh": "2022 级博士研究生"
+    },
+    "Haoyi Fang": {
+      "en": "master student since 2025",
+      "zh": "2025 级硕士研究生"
+    },
+    "Bowen Hu": {
+      "en": "master student since 2025",
+      "zh": "2025 级硕士研究生"
+    },
+    "Jingkun Cao": {
+      "en": "master student since 2025",
+      "zh": "2025 级硕士研究生"
+    },
+    "Meng Jiang": {
+      "en": "master student since 2024",
+      "zh": "2024 级硕士研究生"
+    },
+    "Baoli Liu": {
+      "en": "master student since 2024",
+      "zh": "2024 级硕士研究生"
+    },
+    "Jiuxiang Zhu": {
+      "en": "master student since 2024",
+      "zh": "2024 级硕士研究生"
+    },
+    "Zegang Sun": {
+      "en": "2023-2026,  Master’s degree",
+      "zh": "2023-2026 ·  硕士"
+    },
+    "Xu Yan": {
+      "en": "2023-2026,  Master’s degree · Outstanding Graduate of Beijing",
+      "zh": "2023-2026 ·  硕士 · 北京市优秀毕业生"
+    },
+    "Wei Liu": {
+      "en": "2022-2025, Master’s degree,JD Retail · Outstanding Graduate of Beijing",
+      "zh": "2022-2025 ·  硕士 · 京东零售 · 北京市优秀毕业生"
+    },
+    "Shangwen Jiang": {
+      "en": "2022-2025, Master’s degree,CITIC Securities",
+      "zh": "2022-2025 ·  硕士 · 中信证券"
+    },
+    "Shuaipeng Zhu": {
+      "en": "2022-2024, Master’s degree,XJ Electric Science and Technology Research Institute, China Electrical Equipment Group",
+      "zh": "2022-2024 ·  硕士 · 中国电气装备集团许继电气科学技术研究院"
+    },
+    "Xinyu Ma": {
+      "en": "2022-2024, Master’s degree,CHN Energy",
+      "zh": "2022-2024 ·  硕士 · 国家能源集团"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+<!-- designed by mew -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 210" role="img" aria-labelledby="title desc">
+  <title id="title">Login lockout and recovery</title>
+  <desc id="desc">Five failed attempts for one account or source IP cause a temporary lockout. It clears after fifteen minutes or an administrator reset.</desc>
+  <rect width="960" height="210" rx="24" fill="#f5fafb"/>
+  <g font-family="Arial, sans-serif">
+    <rect x="28" y="36" width="258" height="138" rx="20" fill="#fff" stroke="#d9e8ea"/>
+    <circle cx="67" cy="78" r="21" fill="#e2f5f4"/>
+    <text x="67" y="86" text-anchor="middle" font-size="21" font-weight="700" fill="#087f88">1</text>
+    <text x="103" y="84" font-size="21" font-weight="700" fill="#24363b">5 failed attempts</text>
+    <text x="48" y="134" font-size="17" fill="#5d6e73">Same account or source IP</text>
+
+    <path d="M295 105h35" stroke="#0c8d95" stroke-width="3" stroke-linecap="round"/>
+    <path d="m321 98 9 7-9 7" fill="none" stroke="#0c8d95" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="340" y="36" width="258" height="138" rx="20" fill="#fff" stroke="#d9e8ea"/>
+    <circle cx="379" cy="78" r="21" fill="#e2f5f4"/>
+    <text x="379" y="86" text-anchor="middle" font-size="21" font-weight="700" fill="#087f88">2</text>
+    <text x="415" y="84" font-size="21" font-weight="700" fill="#24363b">Temporary lockout</text>
+    <text x="360" y="134" font-size="17" fill="#5d6e73">Wait 15 min without retrying</text>
+
+    <path d="M607 105h35" stroke="#0c8d95" stroke-width="3" stroke-linecap="round"/>
+    <path d="m633 98 9 7-9 7" fill="none" stroke="#0c8d95" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="652" y="36" width="280" height="138" rx="20" fill="#fff" stroke="#d9e8ea"/>
+    <circle cx="691" cy="78" r="21" fill="#e2f5f4"/>
+    <text x="691" y="86" text-anchor="middle" font-size="21" font-weight="700" fill="#087f88">3</text>
+    <text x="727" y="84" font-size="21" font-weight="700" fill="#24363b">Unlocked</text>
+    <text x="672" y="134" font-size="17" fill="#5d6e73">Automatically or by admin reset</text>
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+# designed by mew
+[Unit]
+Description=Back up LitongLab content and media
+
+[Service]
+Type=oneshot
+User=litonglab
+Group=www-data
+WorkingDirectory=/srv/litonglab/current
+EnvironmentFile=/etc/litonglab.env
+ExecStart=/srv/litonglab/current/.venv/bin/python backend/manage.py backup_site --keep 30
+UMask=0077

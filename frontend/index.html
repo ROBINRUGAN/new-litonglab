@@ -1,0 +1,24 @@
+<!-- designed by mew -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="LitongLab at Renmin University of China" />
+    <title>LitongLab</title>
+    <link rel="icon" href="/assets/favicon.ico" />
+    <script>
+      try {
+        if (localStorage.getItem('litonglab-language') === 'zh')
+          document.documentElement.lang = 'zh-CN';
+        document.documentElement.dataset.theme =
+          localStorage.getItem('litonglab-theme') === 'dark' ? 'dark' : 'light';
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+[
+  {
+    "name": "Le Xie",
+    "chinese": "谢乐",
+    "detail": "PhD student since 2025",
+    "group": "PhD Students",
+    "image": "/images/person-placeholder.svg",
+    "placeholder": true
+  },
+  {
+    "name": "Duling Xu",
+    "chinese": "徐都玲",
+    "detail": "PhD student since 2022",
+    "group": "PhD Students",
+    "image": "/images/person-placeholder.svg",
+    "placeholder": true
+  },
+  {
+    "name": "Haoyi Fang",
+    "chinese": "方浩懿",
+    "detail": "master student since 2025",
+    "group": "Master Students",
+    "image": "/images/person-placeholder.svg",
+    "placeholder": true
+  },
+  {
+    "name": "Bowen Hu",
+    "chinese": "胡博文",
+    "detail": "master student since 2025",
+    "group": "Master Students",
+    "image": "/images/person-placeholder.svg",
+    "placeholder": true
+  },
+  {
+    "name": "Jingkun Cao",
+    "chinese": "曹景堃",
+    "detail": "master student since 2025",
+    "group": "Master Students",
+    "image": "/images/person-placeholder.svg",
+    "placeholder": true
+  },
+  {
+    "name": "Meng Jiang",
+    "chinese": "江猛",
+    "detail": "master student since 2024",
+    "group": "Master Students",
+    "image": "/images/person-placeholder.svg",
+    "placeholder": true
+  },
+  {
+    "name": "Baoli Liu",
+    "chinese": "刘保莉",
+    "detail": "master student since 2024",
+    "group": "Master Students",
+    "image": "/images/person-placeholder.svg",
+    "placeholder": true
+  },
+  {
+    "name": "Jiuxiang Zhu",
+    "chinese": "祝久翔",
+    "detail": "master student since 2024",
+    "group": "Master Students",
+    "image": "/images/person-placeholder.svg",
+    "placeholder": true
+  },
+  {
+    "name": "Zegang Sun",
+    "chinese": "孙泽港",
+    "detail": "2023-2026， Master Degree",
+    "group": "Alumni",
+    "image": "/images/person-placeholder.svg",
+    "placeholder": true
+  },
+  {
+    "name": "Xu Yan",
+    "chinese": "闫旭",
+    "detail": "2023-2026， Master Degree[北京市优秀毕业生]",
+    "group": "Alumni",
+    "image": "/images/person-placeholder.svg",
+    "placeholder": true
+  },
+  {
+    "name": "Wei Liu",
+    "chinese": "刘威",
+    "detail": "2022-2025, Master Degree,京东零售[北京市优秀毕业生]",
+    "group": "Alumni",
+    "image": "/images/person-placeholder.svg",
+    "placeholder": true
+  },
+  {
+    "name": "Shangwen Jiang",
+    "chinese": "蒋尚文",
+    "detail": "2022-2025, Master Degree,中信证券",
+    "group": "Alumni",
+    "image": "/images/person-placeholder.svg",
+    "placeholder": true
+  },
+  {
+    "name": "Shuaipeng Zhu",
+    "chinese": "朱帅鹏",
+    "detail": "2022-2024, Master Degree,中国电气装备集团许继电气科学技术研究院",
+    "group": "Alumni",
+    "image": "/images/person-placeholder.svg",
+    "placeholder": true
+  },
+  {
+    "name": "Xinyu Ma",
+    "chinese": "马心宇",
+    "detail": "2022-2024, Master Degree,国家能源集团",
+    "group": "Alumni",
+    "image": "/images/person-placeholder.svg",
+    "placeholder": true
+  }
+]

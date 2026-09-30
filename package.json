@@ -1,0 +1,20 @@
+{
+  "name": "litonglab",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "setup": "python3 scripts/setup.py",
+    "dev": "python3 scripts/dev.py",
+    "build": "npm --prefix frontend run build",
+    "check": "npm --prefix frontend run typecheck && .venv/bin/python backend/manage.py check && .venv/bin/ruff check backend scripts && .venv/bin/ruff format --check backend scripts && npm run format:check",
+    "test": ".venv/bin/python backend/manage.py test cms.tests",
+    "format": "frontend/node_modules/.bin/prettier --write frontend/src frontend/*.ts frontend/*.json frontend/index.html package.json docs .prettierrc.json && .venv/bin/ruff format backend scripts",
+    "format:check": "frontend/node_modules/.bin/prettier --check frontend/src frontend/*.ts frontend/*.json frontend/index.html package.json docs .prettierrc.json",
+    "backup": ".venv/bin/python backend/manage.py backup_site",
+    "types": "python3 scripts/generate_types.py && frontend/node_modules/.bin/prettier --write frontend/src/types/content.ts",
+    "release": "python3 scripts/package_release.py"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

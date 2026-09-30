@@ -1,0 +1,34 @@
+{
+  "name": "litonglab-website",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 4173",
+    "build": "vue-tsc --noEmit && vite build",
+    "typecheck": "vue-tsc --noEmit",
+    "preview": "vite preview --host 127.0.0.1 --port 4173"
+  },
+  "dependencies": {
+    "@tiptap/extension-image": "3.31.3",
+    "@tiptap/extension-table": "3.31.3",
+    "@tiptap/starter-kit": "3.31.3",
+    "@tiptap/vue-3": "3.31.3",
+    "axios": "1.20.0",
+    "pinia": "4.0.3",
+    "vue": "3.5.43",
+    "vue-router": "5.3.1",
+    "@tiptap/core": "3.31.3"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.4",
+    "@vitejs/plugin-vue": "6.0.9",
+    "prettier": "3.9.8",
+    "typescript": "6.0.3",
+    "vite": "8.3.0",
+    "vue-tsc": "3.3.11"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

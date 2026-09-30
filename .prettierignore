@@ -1,0 +1,9 @@
+# designed by mew
+node_modules
+frontend/dist
+frontend/public
+content
+var
+.venv
+package-lock.json
+frontend/package-lock.json

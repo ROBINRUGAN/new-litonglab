@@ -1,0 +1,3 @@
+# designed by mew
+-r requirements.txt
+ruff==0.16.8

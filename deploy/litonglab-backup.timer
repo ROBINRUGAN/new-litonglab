@@ -1,0 +1,11 @@
+# designed by mew
+[Unit]
+Description=Daily LitongLab backup
+
+[Timer]
+OnCalendar=*-*-* 03:30:00 Asia/Shanghai
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target

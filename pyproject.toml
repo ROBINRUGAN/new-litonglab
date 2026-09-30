@@ -1,0 +1,8 @@
+# designed by mew
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+exclude = [".venv", "var", "node_modules", "frontend"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
